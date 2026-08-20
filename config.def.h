@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"dwmblocks", NULL,
-	"st", NULL,
+	"st", "-c", "st-autostart" NULL,
 	NULL /* terminate */
 };
 
@@ -33,8 +33,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+   { "st-autostart", NULL, NULL, 1 << 0,  0, -1 },
 };
 
 /* layout(s) */
