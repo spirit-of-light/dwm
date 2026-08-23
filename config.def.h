@@ -22,7 +22,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"dwmblocks", NULL,
-	"st", "-c", "st-autostart" NULL,
+	"st", "-c", "st-autostart", NULL,
 	NULL /* terminate */
 };
 
@@ -84,6 +84,7 @@ static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,	                        XK_Print,  spawn,	   {.v = screenshotcmd } },
 	{ 0,	                        XF86XK_AudioRaiseVolume, spawn,  {.v = volup } },
 	{ 0,	                        XF86XK_AudioLowerVolume, spawn,  {.v = voldown } },
 	{ 0,	                        XF86XK_AudioMute, spawn,         {.v = volmute } },
