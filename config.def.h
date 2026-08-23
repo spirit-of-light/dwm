@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -70,8 +71,25 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+/* Volume control */
+static const char *volup[] = { "mixer", "vol=+1%", NULL };
+static const char *voldown[] = { "mixer", "vol=-1%", NULL };
+static const char *volmute[] = { "mixer", "vol.mute=toggle", NULL };
+static const char *volupdate[] = { "pkill", "-76", "dwmblocks", NULL };
+/* MusicPD pause/play */
+static const char *mpdtoggle[] = { "mpc", "toggle", NULL };
+
+/* Screenshot */
+static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,	                        XF86XK_AudioRaiseVolume, spawn,  {.v = volup } },
+	{ 0,	                        XF86XK_AudioLowerVolume, spawn,  {.v = voldown } },
+	{ 0,	                        XF86XK_AudioMute, spawn,         {.v = volmute } },
+	{ 0,	                        XF86XK_AudioRaiseVolume, spawn,  {.v = volupdate } },
+	{ 0,	                        XF86XK_AudioLowerVolume, spawn,  {.v = volupdate } },
+	{ 0,	                        XF86XK_AudioMute, spawn,         {.v = volupdate } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
