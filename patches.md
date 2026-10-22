@@ -5,3 +5,4 @@
 - pertag
 - attachbottom
 - cool autostart
+- taglayouts
