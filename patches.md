@@ -1,0 +1,7 @@
+- bottomstack, omitting horizontal bottom stack
+- centeredmaster, omitting the addition of centeredfloatingmaster
+- bulkill
+- push-nomaster and added keybinds for pushing
+- pertag
+- attachbottom
+- cool autostart
