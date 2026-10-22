@@ -2494,4 +2494,4 @@ bstack(Monitor *m) {
 			if (tw != m->ww)
 				tx += WIDTH(c);
 		}
-	}
+	}}
