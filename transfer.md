@@ -9,6 +9,7 @@
 - [x] Applied taglayouts patch
 - [ ] Applied custom urgent border patch
 - [ ] Applied gridmode patch
+- [ ] Moved grid layout to main file
 - [x] Applied centeredmaster patch and removed the centered floating master functionality
 - [x] Applied bottomstack patch without horizontal stacking functionality
 
@@ -21,11 +22,5 @@
 - [x] Added dwmblocks to autostart
 - [x] Added sound control, added MPD control, added screenshot command, added keybinds
 - [x] Removed tag activity highlight
-- [ ] Added kebind section
-- [ ] Made dmenu color match
-- [ ] Removed named tag movement, added passmenu2 command and keybind
-- [ ] Updated keybinds
 - [ ] Disabled the removal of borders touching the edge of the monitor
-- [ ] Moved grid layout to main file
 - [ ] Removed border sharing because it's impossible to implement it in all other layouts
-- [ ] Enabled passmenu2 keybind
